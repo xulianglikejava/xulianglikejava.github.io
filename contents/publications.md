@@ -1,12 +1,44 @@
-- <strong>S. Li</strong>, X. Yang*, A. Cao*, K. Fan, Y. Liu, C. Wang, and Q.Niu (2024). Label Noise-Robust Learning for Microseismic Arrival Time Picking. <strong>In Revision.</strong> [[Code]](https://github.com/senli1073/LNRL)
+### 项目一：通威 ERP3.0 项目
 
-- X. Yang, <strong>S. Li</strong>, A. Cao*, C. Wang*, Y. Liu, X. Bai, and Q. Niu (2024). Deep Transfer Learning for P-wave Arrival Identification and Automatic Seismic Source Location in Underground Mines. <strong>International Journal of Rock Mechanics and Mining Sciences</strong>. [[Paper]](https://doi.org/10.1016/j.ijrmms.2024.105888)
+**系统架构**：金蝶ERP + Redis + PostgreSQL + RabbitMQ + ZooKeeper + Dubbo  
+**开发时间**：2023.4 – 至今  
+**项目描述**：  
+通威 ERP 系统基于金蝶云苍穹系统进行架构，涵盖供应链、采购、税务、发票、质量、制造、物流等多个模块，采用微服务架构。  
 
-- <strong>S. Li</strong>, X. Yang*, A. Cao*, C. Wang, Y. Liu, Y. Liu, and Q. Niu (2024). SeisT: A Foundational Deep-Learning Model for Earthquake Monitoring Tasks. <strong>IEEE Transactions on Geoscience and Remote Sensing</strong>. [[Paper]](https://doi.org/10.1109/TGRS.2024.3371503) [[Code]](https://github.com/senli1073/SeisT)
+**责任描述**：  
+1. 负责模块：供应链、Tms 相关业务需求整理、对接、功能模块开发等；  
+2. Tms 与多个基地园区系统相关业务设计、开发、集成工作；  
 
-- A. Cao, X. Yang, C. Wang*, <strong>S. Li</strong>, Y. Liu, L. Dou, and Q. Niu (2023). High-Precision Phase Picking and Automatic Source Locating Method for Seismicity in Mines Based on Deep Transfer Learning. <strong>Journal of China Coal Society</strong>. [[Paper]](https://doi.org/10.13225/j.cnki.jccs.2023.0095)
+---
 
-- A. Cao, Y. Liu, X. Yang*, <strong>S. Li</strong>, C. Wang, X. Bai, and Y. Liu (2022). Physical Index and Data Fusion-Driven Method for Coal Burst Prediction in Time Sequence. <strong>Journal of China Coal Society</strong>. [[Paper]](https://doi.org/10.13225/j.cnki.jccs.2022.0680)
+### 项目二：中科星图智慧教具项目
 
-- X. Yang, X. Yu, C. Zhang, <strong>S. Li</strong>, and Q. Niu (2021). MineGPS: Battery-Free Localization Base Station for Coal Mine Environment. <strong>IEEE Communications Letters</strong>. [[Paper]](https://doi.org/10.1109/LCOMM.2021.3081593)
+**系统架构**：SpringBoot + Vue + SQLite + MySQL  
+**开发时间**：2022.4 – 至今  
+**项目描述**：  
+中科星图智慧教具专注于校园地理教育，通过传感器、摄像头等硬件多维度进行地理实验。服务端使用 SpringBoot，前端使用 Vue3，WebRTC 提供摄像头直播服务，Netty 实现软硬件交互。  
+
+**责任描述**：  
+1. 核心设计：技术方案选型、相关组件、库表、业务流程设计；  
+2. 项目管理：完成项目管理工作，推进项目进度保证按时交付；  
+3. 代码审查：组织代码审查提高代码质量；  
+
+---
+
+### 项目三：中国电信安徽动力环境系统
+
+**系统架构**：SpringBoot + JQuery + Vue + Kafka + MySQL + SVN + Redis + ElasticSearch + XXL-Job  
+**开发时间**：2020.10 – 2022.4  
+**项目描述**：  
+中国电信安徽动力环境系统负责安徽全省空调、机房环境、油机等动力设备的管理、监控、告警等。项目通过 SpringBoot + Vue + MySQL 提供应用层支撑用户对设备的管理；使用 XXL-Job、Redis、ElasticSearch 管理采集器对设备信号进行监控、储存；利用 Kafka 负责对告警信息的推送。  
+
+**责任描述**：  
+1. 性能提升, 核心查询服务：  
+   - 使用内存数据库 Redis，存储热点数据；  
+   - 基于减少长事务原则，按功能拆分原长 SQL 查询，按结果类别查询，拆分接口返回；  
+   - 新建合适索引；  
+   - 分析语句，把原先在语句中的计算函数抽出来，用 Java 代码实现。  
+2. 数据管理服务：使用 ElasticSearch 对全省设备信号量、操作日志进行储存和管理，更方便对现场问题进行回滚定位；  
+3. 页面重构：使用 Element-Ui 对原有页面进行优化；  
+4. 负责项目上云工作；  
 
